@@ -1,3 +1,6 @@
 class Figure < ActiveRecord::Base
-  # add relationships here
+  has_many :landmarks
+  has_many :figuretitles
+  has_many :titles, through: :figuretitles
+
 end
